@@ -8,5 +8,5 @@ class EventSerializer(serializers.ModelSerializer):
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Event
+        model = User
         fields = [ "id", "username", "password", "email"]
