@@ -4,7 +4,7 @@ from django.contrib.auth.models import User, Group
 class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
-        fields = [ "id", "title", "summary", "url"]
+        fields = [ "id", "title", "summary", "url", 'user']
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
