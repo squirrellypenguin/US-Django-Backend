@@ -15,3 +15,8 @@ class GroupsSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
         field = ['url', 'name']
+
+class EventUserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Event
+        fields = [ "id", "title", "summary", "url", 'user', 'lat', 'long']
