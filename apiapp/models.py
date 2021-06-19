@@ -7,7 +7,7 @@ class Event(models.Model):
     title = models.CharField(max_length=300)
     summary = models.TextField(max_length=1000, help_text='What is what')
     url = models.CharField(max_length=300, help_text='To Store Img', null=True, default="Aspirational",)
-    user_id = models.ForeignKey(User, on_delete=models.DO_NOTHING, null=True)
+    user = models.ForeignKey(User, on_delete=models.DO_NOTHING, null=True)
     lat = models.FloatField(default=0)
     latRef = models.CharField(max_length=1, default='X')
     long = models.FloatField(default=0) 
