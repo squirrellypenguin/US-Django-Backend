@@ -84,12 +84,14 @@ class UploadView(APIView):
         title = request.data.get('title')
         summary = request.data.get('summary')
         user = request.data.get('user_id')
+        lat = request.data.get('lat')
+        long = request.data.get('long')
         print(title, summary, user,)
         user_obj = User.objects.get(id=user)
         print(user_obj)
         upload_data = cloudinary.uploader.upload(file)
         url = upload_data['url']
-        Event.objects.create(title = title, summary = summary, url = url, user = user_obj)
+        Event.objects.create(title = title, summary = summary, lat=lat, long=long, url = url, user = user_obj)
         return Response({
             'status': 'success',
             'data': upload_data,
