@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'apiapp',
     'corsheaders',
     'rest_framework',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,8 @@ from datetime import timedelta
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=15),
 }
+import cloudinary
+
+cloudinary.config(cloud_name='duvzhauq9',
+                  api_key='346934439838977',
+                  api_secret='SguDqYIY5omlDaalahQd0uk5AUw')

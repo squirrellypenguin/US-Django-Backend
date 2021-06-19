@@ -33,4 +33,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('events/user/<int:id>', views.EventUserList.as_view()),
+    path('upload-image', views.UploadView.as_view()),
 ]

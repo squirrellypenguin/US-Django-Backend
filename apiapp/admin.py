@@ -5,6 +5,6 @@ from .models import Event
 
 class EventAdmin(admin.ModelAdmin):
 
-    list_display = ("title", 'summary', 'user')
+    list_display = ("title", 'summary', 'user_id')
 
 admin.site.register(Event, EventAdmin)
